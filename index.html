@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechAI Solutions - Agentes de IA y Desarrollo Web</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Three.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="dark-header" id="header">
+        <div class="header-container">
+            <a href="#hero" class="logo-link">
+                <h1 class="logo-text">TechAI Solutions</h1>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="dark-nav desktop-nav">
+                <a href="#hero" class="dark-nav-link">Inicio</a>
+                <a href="#servicios" class="dark-nav-link">Servicios</a>
+                <a href="#portfolio" class="dark-nav-link">Casos de Uso</a>
+                <a href="#precios" class="dark-nav-link">Precios</a>
+                <a href="#contacto" class="dark-nav-link">Contacto</a>
+                <a href="#contacto" class="btn-primary nav-cta">
+                    Comenzar Proyecto
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <i data-lucide="menu" class="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#hero" class="mobile-nav-link">Inicio</a>
+            <a href="#servicios" class="mobile-nav-link">Servicios</a>
+            <a href="#portfolio" class="mobile-nav-link">Casos de Uso</a>
+            <a href="#precios" class="mobile-nav-link">Precios</a>
+            <a href="#contacto" class="mobile-nav-link">Contacto</a>
+            <a href="#contacto" class="btn-primary mobile-cta">Comenzar Proyecto</a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-container">
+                <!-- Left Content -->
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i data-lucide="sparkles"></i>
+                        <span>Soluciones de IA y Web a tu Medida</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Transformamos tu negocio con inteligencia artificial
+                    </h1>
+
+                    <p class="hero-description">
+                        Creamos agentes de IA personalizados y páginas web de alto impacto, adaptados a tu presupuesto y necesidades específicas.
+                    </p>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label">Proyectos Exitosos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Clientes Satisfechos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Soporte Disponible</div>
+                        </div>
+                    </div>
+
+                    <div class="hero-cta-group">
+                        <a href="#contacto" class="btn-primary">
+                            <span>Solicitar Cotización</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                        <a href="#servicios" class="btn-secondary">
+                            Ver Servicios
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Content - Three.js Animation -->
+                <div class="hero-visual">
+                    <div id="three-container"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicios" class="services-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Nuestros Servicios</h2>
+                    <p class="section-subtitle">
+                        Soluciones tecnológicas completas para impulsar tu negocio al siguiente nivel
+                    </p>
+                </div>
+
+                <div class="services-grid" id="servicesGrid">
+                    <!-- Services will be populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Casos de Uso Reales</h2>
+                    <p class="section-subtitle">
+                        Proyectos que han transformado negocios y generado resultados medibles
+                    </p>
+                </div>
+
+                <div class="portfolio-grid" id="portfolioGrid">
+                    <!-- Portfolio will be populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="precios" class="pricing-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Precios Flexibles</h2>
+                    <p class="section-subtitle">
+                        Planes adaptados a cada presupuesto. Todos incluyen calidad premium y soporte dedicado
+                    </p>
+                </div>
+
+                <div class="pricing-grid" id="pricingGrid">
+                    <!-- Pricing will be populated by JS -->
+                </div>
+
+                <div class="pricing-note">
+                    <p>💡 ¿No encuentras lo que buscas? Contáctanos para una cotización personalizada</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="contact-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Comienza Tu Proyecto Hoy</h2>
+                    <p class="section-subtitle">
+                        Cuéntanos sobre tu negocio y te enviaremos una propuesta personalizada en 24 horas
+                    </p>
+                </div>
+
+                <div class="contact-container">
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <h3 class="contact-info-title">Información de Contacto</h3>
+                        <p class="contact-info-description">
+                            Estamos aquí para responder tus preguntas y ayudarte a llevar tu negocio al siguiente nivel.
+                        </p>
+
+                        <div class="contact-details">
+                            <div class="contact-detail-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div>
+                                    <div class="contact-label">Email</div>
+                                    <a href="mailto:contacto@techaisolutions.com" class="contact-value">
+                                        contacto@techaisolutions.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="phone"></i>
+                                </div>
+                                <div>
+                                    <div class="contact-label">Teléfono</div>
+                                    <a href="tel:+15551234567" class="contact-value">
+                                        +1 (555) 123-4567
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="map-pin"></i>
+                                </div>
+                                <div>
+                                    <div class="contact-label">Ubicación</div>
+                                    <div class="contact-value">Ciudad de México, México</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-hours">
+                            <h4>Horario de Atención</h4>
+                            <p>Lunes a Viernes: 9:00 AM - 7:00 PM</p>
+                            <p>Sábados: 10:00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <div id="formSuccess" class="form-success" style="display: none;">
+                            <i data-lucide="check-circle" style="width: 64px; height: 64px;"></i>
+                            <h3>¡Mensaje Enviado!</h3>
+                            <p>Gracias por contactarnos. Te responderemos en menos de 24 horas.</p>
+                        </div>
+
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Nombre Completo *</label>
+                                <input type="text" id="name" name="name" required class="form-input" placeholder="Tu nombre">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" id="email" name="email" required class="form-input" placeholder="tu@email.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Teléfono</label>
+                                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+52 123 456 7890">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="service" class="form-label">Servicio de Interés *</label>
+                                <select id="service" name="service" required class="form-select">
+                                    <option value="">Selecciona un servicio</option>
+                                    <option value="ai-agents">Agentes de IA</option>
+                                    <option value="web-development">Desarrollo Web</option>
+                                    <option value="automation">Automatización</option>
+                                    <option value="all">Todos los servicios</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="budget" class="form-label">Presupuesto Estimado</label>
+                                <select id="budget" name="budget" class="form-select">
+                                    <option value="">Selecciona un rango</option>
+                                    <option value="500-2000">$500 - $2,000</option>
+                                    <option value="2000-5000">$2,000 - $5,000</option>
+                                    <option value="5000+">$5,000+</option>
+                                    <option value="flexible">Flexible / A discutir</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Cuéntanos sobre tu proyecto *</label>
+                                <textarea id="message" name="message" required rows="5" class="form-textarea" placeholder="Describe tu proyecto, objetivos y cualquier detalle relevante..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-primary form-submit">
+                                <span>Enviar Mensaje</span>
+                                <i data-lucide="send"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-column">
+                    <h3 class="footer-brand">TechAI Solutions</h3>
+                    <p class="footer-description">
+                        Transformando negocios con soluciones de IA y desarrollo web personalizadas.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://twitter.com" target="_blank" class="social-link">
+                            <i data-lucide="twitter"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="https://github.com" target="_blank" class="social-link">
+                            <i data-lucide="github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Navegación</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#portfolio">Casos de Uso</a></li>
+                        <li><a href="#precios">Precios</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Servicios</h4>
+                    <ul class="footer-links">
+                        <li>Agentes de IA</li>
+                        <li>Desarrollo Web</li>
+                        <li>Automatización</li>
+                        <li>Consultoría Tech</li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Contacto</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contacto@techaisolutions.com">contacto@techaisolutions.com</a></li>
+                        <li><a href="tel:+15551234567">+1 (555) 123-4567</a></li>
+                        <li>Ciudad de México, México</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2025 TechAI Solutions. Todos los derechos reservados.
+                </p>
+                <p class="footer-made-with">
+                    Hecho con <i data-lucide="heart" class="heart-icon"></i>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Three.js Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configuración básica de Three.js
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+            const container = document.getElementById('three-container');
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            container.appendChild(renderer.domElement);
+
+            // Crear átomos (esferas pequeñas)
+            const atoms = [];
+            const atomCount = 50;
+            const atomRadius = 0.1;
+            const sphereRadius = 2;
+
+            // Crear átomos
+            for (let i = 0; i < atomCount; i++) {
+                const geometry = new THREE.SphereGeometry(atomRadius, 16, 16);
+                const material = new THREE.MeshBasicMaterial({
+                    color: 0x00FFD1,
+                    transparent: true,
+                    opacity: 0.8
+                });
+                const atom = new THREE.Mesh(geometry, material);
+                scene.add(atom);
+                atoms.push(atom);
+            }
+
+            // Posición de la cámara
+            camera.position.z = 5;
+
+            // Estado de la animación
+            let state = 'formingSphere'; // formingSphere, randomMovement, formingShape
+            let currentShape = 'sphere';
+            let animationProgress = 0;
+            let targetPositions = [];
+
+            // Función para formar una esfera
+            function formSphere() {
+                for (let i = 0; i < atoms.length; i++) {
+                    const theta = Math.random() * Math.PI * 2;
+                    const phi = Math.acos(2 * Math.random() - 1);
+                    const x = sphereRadius * Math.sin(phi) * Math.cos(theta);
+                    const y = sphereRadius * Math.sin(phi) * Math.sin(theta);
+                    const z = sphereRadius * Math.cos(phi);
+                    targetPositions[i] = new THREE.Vector3(x, y, z);
+                }
+            }
+
+            // Función para formar un cubo
+            function formCube() {
+                const cubeSize = 2;
+                for (let i = 0; i < atoms.length; i++) {
+                    const u = Math.random();
+                    const v = Math.random();
+                    const theta = 2 * Math.PI * u;
+                    const phi = Math.acos(2 * v - 1);
+                    const x = cubeSize * (Math.sign(Math.cos(theta)) * Math.sign(Math.sin(phi)));
+                    const y = cubeSize * (Math.sign(Math.sin(theta)) * Math.sign(Math.sin(phi)));
+                    const z = cubeSize * (Math.sign(Math.cos(phi)));
+                    targetPositions[i] = new THREE.Vector3(x, y, z);
+                }
+            }
+
+            // Función para formar una pirámide
+            function formPyramid() {
+                const pyramidHeight = 3;
+                const baseSize = 2;
+                for (let i = 0; i < atoms.length; i++) {
+                    const u = Math.random();
+                    const v = Math.random();
+                    const x = (u - 0.5) * baseSize * 2;
+                    const z = (v - 0.5) * baseSize * 2;
+                    const y = pyramidHeight * (1 - Math.max(Math.abs(x), Math.abs(z)) / baseSize) - pyramidHeight / 2;
+                    targetPositions[i] = new THREE.Vector3(x, y, z);
+                }
+            }
+
+            // Función para mover átomos aleatoriamente
+            function randomMovement() {
+                for (let i = 0; i < atoms.length; i++) {
+                    targetPositions[i] = new THREE.Vector3(
+                        (Math.random() - 0.5) * 6,
+                        (Math.random() - 0.5) * 6,
+                        (Math.random() - 0.5) * 6
+                    );
+                }
+            }
+
+            // Iniciar con la esfera
+            formSphere();
+
+            // Animación
+            function animate() {
+                requestAnimationFrame(animate);
+
+                animationProgress += 0.01;
+
+                if (state === 'formingSphere' && animationProgress >= 1) {
+                    animationProgress = 0;
+                    state = 'randomMovement';
+                    randomMovement();
+                } else if (state === 'randomMovement' && animationProgress >= 1) {
+                    animationProgress = 0;
+                    state = 'formingShape';
+                    const shapes = ['sphere', 'cube', 'pyramid'];
+                    currentShape = shapes[Math.floor(Math.random() * shapes.length)];
+                    if (currentShape === 'sphere') formSphere();
+                    else if (currentShape === 'cube') formCube();
+                    else if (currentShape === 'pyramid') formPyramid();
+                } else if (state === 'formingShape' && animationProgress >= 1) {
+                    animationProgress = 0;
+                    state = 'randomMovement';
+                    randomMovement();
+                }
+
+                // Interpolar posiciones
+                for (let i = 0; i < atoms.length; i++) {
+                    atoms[i].position.lerp(targetPositions[i], 0.05);
+                }
+
+                renderer.render(scene, camera);
+            }
+
+            // Ajustar el tamaño del renderer al cambiar el tamaño de la ventana
+            window.addEventListener('resize', function() {
+                const width = container.clientWidth;
+                const height = container.clientHeight;
+                renderer.setSize(width, height);
+                camera.aspect = width / height;
+                camera.updateProjectionMatrix();
+            });
+
+            // Iniciar animación
+            animate();
+        });
+    </script>
+
+    <!-- Main Script -->
+    <script src="Script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
